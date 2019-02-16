@@ -11,8 +11,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class ConfigExample {
 
-//    @Bean
-//    public Cat cat(){
-//        return new Cat();
-//    }
+    @Bean
+    public Cat cat(){
+        return new Cat();
+    }
 }
