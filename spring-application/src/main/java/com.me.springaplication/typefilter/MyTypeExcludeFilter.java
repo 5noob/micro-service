@@ -10,7 +10,12 @@ import java.io.IOException;
 /**
  * @author OuyangJie
  * @Date 2019/2/17 17:14
- * @Description:
+ * @Description: 存在于spring Bean池中的TypeExcludeFilter，结合下面的注解，用来验证TypeExcludeFilter的作用
+ *     @ComponentScans({
+ *         @ComponentScan(basePackages = "com.me.scantest", excludeFilters = {
+ *                 @ComponentScan.Filter(type = FilterType.CUSTOM, classes = TypeExcludeFilter.class)
+ *         })
+ *     })
  */
 @Component
 public class MyTypeExcludeFilter extends TypeExcludeFilter {
