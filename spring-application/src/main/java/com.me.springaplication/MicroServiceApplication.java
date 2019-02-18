@@ -3,8 +3,10 @@ package com.me.springaplication;
 import com.me.autoconfig.Cat;
 import com.me.springaplication.importselector.MyImportSelector;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.AutoConfigurationPackages;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.TypeExcludeFilter;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
@@ -42,6 +44,14 @@ public class MicroServiceApplication {
         MicroServiceApplication microServiceApplication = context.getBean(MicroServiceApplication.class);
         System.out.println(microServiceApplication);
     }
+
+//    public static void main(String[] args) {
+//        // 验证springboot的类型推断
+//        SpringApplication springApplication = new SpringApplication(MicroServiceApplication.class);
+//        springApplication.setWebApplicationType(WebApplicationType.NONE);
+//        ConfigurableApplicationContext context = springApplication.run(args);
+//        System.out.println("当前spring应用上下文的类：" + context);
+//    }
 
 }
 
