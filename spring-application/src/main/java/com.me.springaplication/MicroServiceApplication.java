@@ -1,6 +1,7 @@
 package com.me.springaplication;
 
 import com.me.autoconfig.Cat;
+import com.me.springaplication.config.EnvironmentExplore;
 import com.me.springaplication.importselector.MyImportSelector;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.WebApplicationType;
@@ -43,6 +44,11 @@ public class MicroServiceApplication {
         //3、验证启动类，是否注入了spring的bean池中
         MicroServiceApplication microServiceApplication = context.getBean(MicroServiceApplication.class);
         System.out.println(microServiceApplication);
+
+        //4、验证spring boot的环境变量
+        EnvironmentExplore environmentExplore = context.getBean(EnvironmentExplore.class);
+        System.out.println("来自：" + environmentExplore.getFrom());
+
     }
 
 //    public static void main(String[] args) {
